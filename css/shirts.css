@@ -1,0 +1,475 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box; 
+    text-decoration: none
+}
+ul{
+    list-style: none; margin: 0; padding: 0;
+}
+a {
+    text-decoration: none;
+}
+body{
+    padding:0; margin:0; font-family: ;
+}
+.search {
+    width:300px;height: 35px; font-size:14px;
+    font-family:century gothic; letter-spacing:auto;
+    padding: 5px ; border: 2px solid #ddd;  
+    outline: none;	margin-left: 80px ;border-top: 0;
+    border-left: 0
+}
+.search::placeholder{
+     letter-spacing: 2px; text-align: center
+}
+.search-holder {
+    display: flex; justify-content: center;
+    position: relative; top: 65px; background:
+}
+.find {
+   width: 70px; height: 35px;
+    background-color: #ddd; border: 0;
+    outline: none;
+    font-family: century gothic; font-size: 20px;
+    font-variant: small-caps; letter-spacing: 1px;
+    cursor: pointer;transition: all .4s ease-out;    
+}
+.find:hover{
+    background-color:  #cccccc; transition: all .4s ease-in;
+}
+header{
+    display: flex; justify-content: center;
+}
+.nav{
+    width:1210px ; height:70px;
+    display: flex; justify-content:space-between;
+    border-bottom:  1px solid #f1f3f2; 
+}
+.logo-div {
+     width: 70px; height: 55px;
+    display: flex;justify-content:space-around;
+    background-color: #e72d6d; transform: rotate(-20deg); 
+    z-index: 2
+}
+.logo-div::before {
+    content: '';
+    width: 0; color:transparent;background-color: transparent;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-top: 20px solid #e72d6d;
+    position: absolute; bottom: -19px;
+    left: 0;
+    
+}
+.logo{
+    font-family:century gothic; 
+    font-size: 14px;letter-spacing:2px;
+    color:#fff ; margin: 5px 0; 
+    font-variant: small-caps; font-weight:bolder; 
+}
+
+.logo::first-letter{
+    font-size: 18px; 
+}
+.logo-ul {
+    width: 330px; display:flex;
+    flex-direction: column;
+    justify-content: space-around; 
+}
+.ul-list > li {
+    color: #666666; padding:0 15px; margin: 30px 0 10px 0;
+    display: inline-flex
+}
+.ul-list > li a {
+    font-family:century gothic,tahoma; 
+    font-size:17px; color: #4d4d4d; 
+    letter-spacing: 2px; font-variant: small-caps; transition: color .5s ease;
+}
+.ul-list > li a:hover{
+    color: #d38f43;
+    transition: color .5s ease;
+}
+.menu-women, .menu-men{
+    position: relative; z-index: 1
+}
+
+.women-colum, .men-colum {
+    width: 1350px;height: 635px; position: absolute; top:25px;left: -165px ;
+    background-image: url(../images/Marion-hd.jpg); 
+    background-size:contain; background-repeat: no-repeat;
+    background-position:right;background-color: #fff;
+    visibility: hidden; opacity:0;
+}
+.men-colum {
+    background-image: url(../images/man-co.jpg); 
+    left: -265px
+}
+.women-colum span {
+    font-family: century gothic; font-size: 18px;
+    font-variant: small-caps;color: deeppink;
+    font-weight: bold; letter-spacing: 1px
+}
+.men-colum span {
+     font-family: century gothic; font-size: 18px; 
+    font-variant: small-caps;color: darkblue;
+    font-weight: bold; letter-spacing: 1px
+}
+.women-colum ul, .men-colum ul {
+    display: inline-block; margin: 50px 70px
+}
+.women-colum ul li, .men-colum ul li {
+    margin: 10px
+}
+.menu-women:hover .women-colum, .menu-men:hover .men-colum {
+    visibility: visible;  opacity: 1; transition: all .4s ease-in
+}
+
+.sign-log {
+    width: 370px; display:flex;
+    flex-direction: column; 
+    justify-content:flex-start;
+}
+.sign-p{
+    font-family:Titillium Web; font-size:16px;
+    text-align: center; cursor: pointer;
+    font-variant: small-caps;
+    transition: transform .4s ease;    
+}
+.sign-p span:hover{
+    border-bottom: 1px solid; 
+ }
+
+.bag-star {
+    width: 370px;height: 40px;
+    display:flex; flex-direction:row ; 
+    justify-content:center;
+}
+#wish-list, #shop-bag, #search-btn{
+    width:30px; height: 25px;
+    background-color:transparent; color:#8c8c8c;
+    cursor:pointer; outline: none; border: none;
+    transition: all .3s ease-in-out; margin: 20px 35px; 
+    padding: 0 5px 
+}
+#shop-bag img, #search-btn img, #wish-list img {
+    width: 18x;height: 18px; display:block;
+}
+#wish-list:hover, #shop-bag:hover, #search-btn:hover{
+ color: coral; transition: all .5s ease-in
+}
+.icons-text {
+     width: 400px; height: 29px;position: absolute; 
+    top: 40px; display: flex;
+    justify-content: center;
+}
+.icons-text span {
+    font-family:Titillium Web; font-size:14px;
+    line-height: 20px; font-variant: small-caps;
+    color: #4d4d4d;margin: 0 28px
+}
+.wish-div, .shop-div{
+    width: 300px; height: 0;
+    background-color:#fff; visibility:hidden; 
+    position: relative; right: 160px; top:32px;
+    font-family:Titillium Web; font-size: 16px; 
+    font-variant: small-caps;
+    border: 1px solid #e3e6e4;border-top: 0;
+    display: flex;justify-content: center;
+    flex-direction: column; z-index: 1
+}
+.shop-div {
+    right: 240px
+}
+.shop-div h4, .wish-div h4 {
+    border-bottom: 1px solid #e3e6e4;
+    color:gray; text-align: center;
+    padding: 10px 0;
+    letter-spacing: 1px
+}
+.wish-div h4 {
+    border: 0 
+}
+.shop-div p {
+    border: 0; color:gray; text-align: center;
+    padding: 5px 0; letter-spacing: 1px
+}
+#wish-list:hover .wish-div, 
+#shop-bag:hover .shop-div {
+    height: 120px; visibility: visible;
+    transition: all .3s ease-in
+}
+.sign-div, .log-div {
+    width: 100%; height:0; position:absolute;top: 0;
+    transition: all .5s ease-in-out;
+    z-index: 99; overflow: hidden; 
+}
+.sign-div div {
+    background: ; display: flex; 
+    justify-content:center; flex-direction:column; height: 100%; width: 700px;  margin: 0 auto
+}
+.sign-div{
+    background-image: url(../images/shoes-2425122_1280.jpg);
+     background-size: cover;
+}
+.sign-div p {
+    font-family: century gothic; color: white;  font-size: 25px;
+    letter-spacing: 1px; text-transform: capitalize; 
+    text-align: center; line-height: ; margin:20px 0 ;
+}
+.sign-div span {
+    text-decoration: underline; cursor: pointer;font-size: 16px;font-family: century gothic; color: white;  font-size: 20px;
+    letter-spacing: 1px; font-variant: small-caps; 
+    text-align: center; line-height: 30px;
+}
+
+.sign-div input {
+    width: 300px; height: 35px ; border: none; outline: none; padding: 5px;
+    margin: ; font-family: century gothic; 
+    letter-spacing: 1.5px;margin: 10px auto
+}
+.sign-div input::placeholder{
+    font-family: century gothic; text-transform:capitalize; letter-spacing: 1px; 
+    text-align: center; 
+}
+.log-div{
+    background: white;   
+}
+.log-img  {
+    width: 60%; height: 0%; position: relative; overflow: hidden;
+    transition: height .5s ease-in-out
+}
+.log-img img {
+    width:43% ; margin: 20px; transform: rotate(-20deg);opacity: .7; border: 1px solid #d38f43
+}
+.log-input{
+    width: 40%; position: absolute; right: 0; background: 
+}
+.log-input input{
+    width: 210px; height: 25px ; border:1px solid #ddd; 
+    outline: none; margin: 10px 0 0 2px; display: inline-block;
+    padding: 5px; font-family: century gothic; 
+    letter-spacing: 1.5px; 
+}
+.log-input input::placeholder {
+    opacity: .7
+}
+.log-input i {
+    color: ; font-size: 14px; position: relative;
+    left: 92%; top: -22px; cursor: pointer; opacity: .3;
+    transition: transform .3s ease
+     
+}
+.log-input i:hover{
+    transform: translateX(6px); 
+    transition: transform .3s ease-in-out
+}
+
+.log-input p {
+    font-family: century gothic; color: ;  font-size: 18px;
+    letter-spacing: 1px; text-transform: capitalize; 
+    text-align: center; margin: 100px 0 0 0; cursor: pointer;
+    opacity: .7
+}
+.log-input p:hover{
+    transform: rotate(360deg);opacity: 1;
+    transition: .6s ease
+}
+.log-input span {
+    margin: 40px 0; font-size: 22px; position: relative; left: 35%; opacity:.8 ; filter: brightness(100%)
+}
+.log-input span:hover{
+    filter: brightness(80%); opacity: 1
+}
+
+.views {
+    width:auto ; height: 580px; position: relative; top: 0px;
+    background: ; overflow: hidden; background: red
+}
+.view-flow {
+    width: 1110px; height: 580px; background: ;
+    margin:0 auto ; overflow:hidden; position: relative; 
+}
+.view-holder{
+    width: 4440px; height: 580px; background: ;
+    position: absolute; animation: slider 15s infinite alternate
+}
+@keyframes slider {
+    20%{
+        left: 0%
+    }
+    35%{
+        left: -100%
+    }
+    50%{
+        left: -100%
+    }
+    65%{
+        left: -200%
+    }
+    75%{
+        left:-200%
+    }
+    90% {
+        left: -300%
+    }
+    100% {
+        left: -300%
+    }   
+}
+
+.view-holder div {
+    width: 1110px; height: 580px; display: inline-block;
+    background-size: 1110px 700px; background-repeat: no-repeat;
+    margin: 0 -2px
+    
+}
+
+
+
+
+.product-collec{
+    width:auto; height: auto; display: flex;
+    justify-content: center;
+    margin: ;position: relative;top: 30px;
+    background-color: rgb(255,245,245)
+}
+.holder {
+    background-color: ; width:1150px; background: 
+}
+.product{
+    width: 250px; height: 350px; margin:20px 17px ; 
+    justify-content:space-between;
+    display: inline-flex;background-color: ;
+    cursor: pointer; overflow: hidden;position:relative;
+    border: 1px solid #ddd
+}
+.img {
+    width: 100%; height: 100%
+}
+.img:hover {
+    transform: scale(1.2,1.2); transition: all .3s ease;
+}
+.quick-v {
+    width: 250px; height: 100%; background-color:rgba(0,0,0,0.05); 
+    position: absolute;bottom: 0; text-align: center;
+    font-family: Titillium web; font-variant: small-caps;
+    font-size: 30px; font-weight: ; letter-spacing: 1px;
+    color: #fff; cursor: pointer; opacity: 0; display: block;
+}
+.quick::after {
+    content: '';
+    display: block; margin: 4px auto;
+    width:0; height: 2px; background-color: tomato;
+}
+.quick:hover::after {
+    width: 35%; transition: all .5s ease
+}
+.product:hover .quick-v {
+    height: 50px; transition: all .4s ease; color:; opacity: 1;
+}
+.details {
+    background-color: #fff; width: 330px; height: 360px;
+    margin: auto 0
+}
+.details p {
+    display: ; font-family: century gothic; font-size: 25px;
+    font-variant: small-caps; margin: 20px; color: #737373;
+    cursor: pointer;
+}
+.details span {
+    display: ; font-family: century gothic; font-size: 20px;
+    font-variant: small-caps; margin: 20px; color: navy; 
+    border: 1px solid #ddd; padding:  5px; cursor: pointer;
+}
+.details h2 {
+    font-family: century gothic; font-weight:normal;
+    letter-spacing: 2px; text-align: center;
+    text-transform: capitalize; color: navy;
+    padding: 2px 10px; background-color: #fff;
+    border: 1px solid #ddd; margin: 0 30px
+}
+.details span:hover {
+    border-bottom: 1px solid gray; 
+    transition: all .5s ease
+}
+.details-imgs {
+    width: 100px; height: 100%; 
+    display: none; margin-right: px
+}
+.details-imgs img {
+    display: block; width: 100%; height: 33%;
+    margin: 0 0 8px 0; 
+}
+
+
+#show-tog{
+    background-color:#fff; width: 40px;
+    height: 150px;display:none; text-align: center; 
+    position:fixed; top: 60px; right: 0;
+}
+#main-view, #twise-view{
+    width:40px; height: 40px; border:0; 
+    background: transparent; color: darkgray; 
+    cursor: pointer; outline: none;
+    margin: 5px 0;font-size: 20px
+    
+}
+#twise-view:hover, #main-view:hover {
+    color: gray; 
+    transform: scale(1.1,1.1);
+    transition: all .4s ease-in;
+}
+
+.next-perv {
+    width: 230px; height: 50px; background-color: #fff;
+    margin: 100px auto;font-family: century gothic;
+    font-size: 20px;text-align: center; 
+    text-transform: capitalize; color: #737373;
+    border: 1px solid #e3e4e6
+}
+.next-perv i {
+    margin:  10px 5px; cursor: pointer; font-size: 25px;
+    width: 30px; transition: all .2s ease-out
+}
+.next-perv span {
+    letter-spacing: 1px
+}
+.next:hover{
+    color: #737373; transform: translateX(8px);
+    transition: all .2s ease-in
+}
+.perv:hover{
+    color: #737373; transform: translateX(-8px);
+    transition: all .2s ease-in
+}
+footer {
+    width: auto; height: 150px; 
+    background-color:#fff;
+    border: 1px solid #e3e6e4; display: flex;
+    justify-content: ;
+}
+.social-icons {
+    width: 250px; height: auto; background:gray ; 
+    display: flex; justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    color:#fff; font-size: 50px;
+    margin:0 20px 
+}
+
+
+
+
+
+
+
+
+
+.views-toggle {
+    position: relative; top: 80px; height: 500px
+}
